@@ -35,6 +35,8 @@
         "../cm/multiplex.js",
         "../cm/htmlmixed.js",
         "../cm/htmlembedded.js",
+        "../cm/runmode.js",
+        "../cm/placeholder.js",
 
         "../cm/matchbrackets.js",
         "../cm/closebrackets.js",
@@ -61,6 +63,8 @@
         "../cm/multiplex.js",
         "../cm/htmlmixed.js",
         "../cm/htmlembedded.js",
+        "../cm/runmode.js",
+        "../cm/placeholder.js",
 
         "../cm/matchbrackets.js",
         "../cm/closebrackets.js",

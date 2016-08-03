@@ -442,6 +442,9 @@ WebInspector.CallStackSidebarPane.prototype = {
 WebInspector.CallStackSidebarPane.CallFrame = function(functionName, location, linkifier, debuggerCallFrame, locationPool, asyncCallFrame)
 {
     WebInspector.UIList.Item.call(this, WebInspector.beautifyFunctionName(functionName), "");
+    if (dirac.hasBeautifyFunctionNames) {
+        this.titleElement.title = dirac.getFullFunctionName(functionName);
+    }
     this._location = location;
     this._debuggerCallFrame = debuggerCallFrame;
     this._asyncCallFrame = asyncCallFrame;
@@ -467,7 +470,8 @@ WebInspector.CallStackSidebarPane.CallFrame.prototype = {
             return;
         var text = uiLocation.linkText();
         this.setSubtitle(text.trimMiddle(30));
-        this.subtitleElement.title = text;
+        var fullUrl = uiLocation.toUIString();
+        this.subtitleElement.title = fullUrl;
     },
 
     __proto__: WebInspector.UIList.Item.prototype

@@ -81,6 +81,7 @@
         "textButton.css",
         "textPrompt.css",
         "tooltip.css",
-        "treeoutline.css"
+        "treeoutline.css",
+        "treeoutline-dirac.css"
     ]
 }
